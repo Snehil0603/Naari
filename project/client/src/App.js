@@ -1,24 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./pages/login/Login";
+import LandingPage from "./pages/landingPage/LandingPage";
+import Register from "./pages/register/Register";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Context } from "./context/Context";
+import LoaderAnimation from "./pages/bookLoader/BookLoader";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+  const {user}=useContext(Context);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+  
+  return (  
+    
+    
+    <Router>
+    <Route exact path="/">
+    <div>
+    {
+      loading ? 
+      <LoaderAnimation/>
+      :
+     <div>
+     <Register/>
+     </div>
+    }
+    
     </div>
+</Route>
+   
+    <Switch>
+    <Route exact path="/register">
+   <Register />
+</Route>
+ <Route path="/login">
+ <Login/>
+       </Route>
+ <Route path="/landingPage">
+ <LandingPage/>
+       </Route>
+  </Switch>
+  </Router>
+   
+   
+   
   );
 }
 
