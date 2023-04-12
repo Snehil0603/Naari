@@ -4,6 +4,7 @@ const dotenv=require("dotenv")
 const mongoose=require("mongoose")
 const authUser=require("./routes/auth")
 const userRoute=require("./routes/users")
+const complainRoute=require("./routes/complains")
 
 const cors = require("cors");
 
@@ -18,6 +19,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use("/server/auth",authUser)
 app.use("/server/users",userRoute)
+app.use("/server/complains",complainRoute)
 
 
 app.listen("5000",()=>{

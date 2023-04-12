@@ -56,9 +56,9 @@ const Navbar = () => {
                             About
                         </li>
                     </Link>
-                    <Link to={"/case"}>
+                    <Link to={"/complain"}>
                         <li className="text-white mb-0 md:my-0 my-7 md:mx-10 md:ml-0 ml-12  font-semibold text-lg mx-4">
-                            Case
+                            Complain
                         </li>
                     </Link>
                     <Link to={"/contact"}>
@@ -73,7 +73,7 @@ const Navbar = () => {
 
                     <Link to={"/login"}>
                         <button className=" px-4 py-[6px] rounded-lg bg-[#D14095] text-white transition duration-300">
-                            Sign In
+                           Sign in
                         </button>
                     </Link>
                 </div>
