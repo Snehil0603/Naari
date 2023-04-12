@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from "axios";
 
+import Hero from "../../components/Hero"
+import Navbar from "../../components/Navbar"
 
-
-export default function LandingPage() {
-
+const LandingPage = () => {
   return (
     <div>
-   
-    hello World
+        <Navbar />
+        <Hero />
     </div>
   )
 }
+export default LandingPage
