@@ -7,5 +7,5 @@
   font-family: 'Urbanist';
 }
 .hero{
-  background: url('./assets/bg.jpg') center;
+  background: url('../src/assests/bgimg.jpg') center;
 }

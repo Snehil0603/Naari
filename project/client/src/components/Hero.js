@@ -1,4 +1,4 @@
-// import bg from '../assets/bgimg.jpg'
+import bg from '../assests/bgimg.jpg'
 import hero from '../assests/hero.jpg'
 const Hero = () => {
     return (

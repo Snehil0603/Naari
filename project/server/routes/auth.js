@@ -1,6 +1,5 @@
 const router=require("express").Router();
 const User=require("../models/User")
-const User=require("../models/Complain")
 const bcrypt=require("bcrypt")
 
 // Register
@@ -43,7 +42,7 @@ router.post("/login",async(req,res)=>{
         res.status(200).json(others)
     }
     catch(err){
-        // res.status(500).json(err)
+        res.status(500).json(err)
     }
 })
 

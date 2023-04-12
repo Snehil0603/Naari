@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import complaint from "../assets/complaint.png";
-import chat from "../assets/chat.png";
-import laws from "../assets/laws.png";
-import session from "../assets/session.png";
-import counselling from "../assets/counselling.png";
-import track from "../assets/track.png";
+import complaint from "../assests/complaint.png";
+import chat from "../assests/chat.png";
+import laws from "../assests/laws.png";
+import session from "../assests/session.png";
+import counselling from "../assests/counselling.png";
+import track from "../assests/track.png";
 const Features = () => {
   const featureData = [
     {
