@@ -3,13 +3,14 @@ const Complain=require("../models/Complain")
 
 
 // Create complain form
-router.post("/",async(req,res)=>{
+router.post("/multiForm",async(req,res)=>{
     const newComplain=new Complain(req.body)
     try{
         const savedComplain= await newComplain.save()
         res.status(200).json(savedComplain)
     }
     catch(err){
+        console.log(err)
         res.status(500).json(err)
     }
    

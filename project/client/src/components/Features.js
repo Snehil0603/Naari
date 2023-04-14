@@ -5,37 +5,52 @@ import laws from "../assests/laws.png";
 import session from "../assests/session.png";
 import counselling from "../assests/counselling.png";
 import track from "../assests/track.png";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+
+
 const Features = () => {
   const featureData = [
     {
       img: complaint,
       title: "File Complain",
       description: "File your complain with easy process",
+      ref:"/complain"
     },
     {
       img: chat,
       title: "Chat",
       description: "Have one to one conversation with authority",
+      ref:"/chat"
     },
     {
       img: track,
       title: "Track Complain",
       description: "Track your complain status",
+      ref:"/track"
     },
     {
       img: laws,
       title: "Laws",
       description: "Learn about the laws of harassment",
+      ref:"/rules"
     },
     {
       img: session,
       title: "Mentoring Sessions",
       description: `Information of the session conducted by NGOs`,
+      ref:"/session"
     },
     {
       img: counselling,
       title: "Counselling",
       description: "Join counselling for any problem without any hesitation",
+      ref:"/counselling"
     },
   ];
 
@@ -52,6 +67,7 @@ const Features = () => {
         {featureData.map((features) => {
           return (
             <div className="mt-6 flex items-center flex-col cursor-pointer group">
+            <Link to={features.ref}>
               <img
                 className="max-w-[120px] group-hover:scale-110 transition-all"
                 src={features.img}
@@ -64,6 +80,7 @@ const Features = () => {
               <p className="text-white font-light mx-4">
                 {features.description}
               </p>
+              </Link>
             </div>
           );
         })}

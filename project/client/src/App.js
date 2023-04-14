@@ -1,6 +1,10 @@
 import Login from "./pages/login/Login";
 import LandingPage from "./pages/landingPage/LandingPage";
 import Register from "./pages/register/Register";
+import ComplainForm from "./pages/complainForm/ComplainForm"
+import MultiForm from "./pages/multiForm/MultiForm";
+// import Rules from "./pages/rules/Rules";
+
 
 import {
   BrowserRouter as Router,
@@ -9,10 +13,12 @@ import {
   Routes,
   Link
 } from "react-router-dom";
+
 import { useContext, useEffect, useState } from "react";
 import { Context } from "./context/Context";
 import LoaderAnimation from "./pages/bookLoader/BookLoader";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Rules from "./pages/rules/Rules";
 
 function App() {
   
@@ -54,6 +60,19 @@ function App() {
  <Route path="/landingPage">
  <LandingPage/>
        </Route>
+
+       <Route path="/complain">
+ <ComplainForm/>
+ 
+       </Route>
+
+       <Route path="/multiForm">
+ <MultiForm/>
+       </Route>
+       <Route path="/rules">
+ <Rules/>
+       </Route>
+
   </Switch>
   </Router>
    

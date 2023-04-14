@@ -26,7 +26,7 @@ const ComplainSchema=new mongoose.Schema({
         required :true,
         unique:true
     },
-    distict:{
+    district:{
         type:String,
         required :true,
         unique:true

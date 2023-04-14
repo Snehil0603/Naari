@@ -46,7 +46,7 @@ const Navbar = () => {
                             onClick={() => setMenuOpen(false)}
                         />
                     )}
-                    <Link to={"/"}>
+                    <Link to={"/landingPage"}>
                         <li className="text-white mb-0 md:my-0 my-7 md:mx-10 md:ml-0 ml-12 font-semibold text-lg mx-4">
                             Home
                         </li>
@@ -56,9 +56,9 @@ const Navbar = () => {
                             About
                         </li>
                     </Link>
-                    <Link to={"/complain"}>
+                    <Link to={"/Testimonials"}>
                         <li className="text-white mb-0 md:my-0 my-7 md:mx-10 md:ml-0 ml-12  font-semibold text-lg mx-4">
-                            Complain
+                        Testimonials
                         </li>
                     </Link>
                     <Link to={"/contact"}>
@@ -71,9 +71,9 @@ const Navbar = () => {
                 <div className="flex items-center">
                     {/* <AiOutlineSearch className="text-2xl " /> */}
 
-                    <Link to={"/login"}>
+                    <Link to={"/"}>
                         <button className=" px-4 py-[6px] rounded-lg bg-[#D14095] text-white transition duration-300">
-                           Sign in
+                           Log Out
                         </button>
                     </Link>
                 </div>

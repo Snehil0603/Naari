@@ -1,5 +1,6 @@
 import bg from '../assests/bgimg.jpg'
 import hero from '../assests/hero.jpg'
+import "./hero.css"
 const Hero = () => {
     return (
         <div className='hero h-[100vh]'>
