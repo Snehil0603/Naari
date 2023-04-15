@@ -3,8 +3,14 @@ import LandingPage from "./pages/landingPage/LandingPage";
 import Register from "./pages/register/Register";
 import ComplainForm from "./pages/complainForm/ComplainForm"
 import MultiForm from "./pages/multiForm/MultiForm";
-// import Rules from "./pages/rules/Rules";
-
+import { useContext, useEffect, useState } from "react";
+import { Context } from "./context/Context";
+import LoaderAnimation from "./pages/bookLoader/BookLoader";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Rules from "./pages/rules/Rules";
+import Testimonials from "./pages/testimonials/Testimonials";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 
 import {
   BrowserRouter as Router,
@@ -14,11 +20,7 @@ import {
   Link
 } from "react-router-dom";
 
-import { useContext, useEffect, useState } from "react";
-import { Context } from "./context/Context";
-import LoaderAnimation from "./pages/bookLoader/BookLoader";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Rules from "./pages/rules/Rules";
+
 
 function App() {
   
@@ -72,6 +74,15 @@ function App() {
        <Route path="/rules">
  <Rules/>
        </Route>
+       <Route path="/testimonials">
+ <Testimonials/>
+       </Route>
+        <Route path="/about">
+ <About/>
+       </Route>
+       <Route path="/contact">
+ <Contact/>
+       </Route> 
 
   </Switch>
   </Router>
