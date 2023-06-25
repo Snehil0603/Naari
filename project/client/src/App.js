@@ -11,7 +11,7 @@ import Rules from "./pages/rules/Rules";
 import Testimonials from "./pages/testimonials/Testimonials";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
-
+import Chat from "./pages/chat/Chat";
 import {
   BrowserRouter as Router,
   Switch,
@@ -83,7 +83,9 @@ function App() {
        <Route path="/contact">
  <Contact/>
        </Route> 
-
+       <Route path="/chat">
+ <Chat/>
+       </Route> 
   </Switch>
   </Router>
    

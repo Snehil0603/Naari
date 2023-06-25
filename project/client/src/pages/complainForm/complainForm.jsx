@@ -16,12 +16,14 @@ export default function ComplainForm() {
   return (
     
     <div className="bgimg" >
-       <div id="c">
+       <div id="banner">
         <h1 className='h1'>EACH TIME A WOMAN STANDS UP FOR HERSELF SHE STANDS UP FOR ALL WOMEN !!!</h1>
+        <div className='btn'>
         <button id="a buttonc" onClick={handleClick1}>Opt For Counselling</button>
             <button className="GFG buttonc" onClick={handleClick2}>
                 Raise your complain
             </button>
+            </div>
     </div>
     </div>
     
