@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import { useState } from "react";
 import axios from "axios";
 import "./multiForm.css";
-import {Helmet} from "react-helmet";
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function MultiForm() {
 
 
-
+// const nodemailer = require('nodemailer');
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns= document.querySelectorAll(".btn-next");
 const progress= document.getElementById("progress");
@@ -70,7 +70,7 @@ const progressActive = document.querySelectorAll(".progress-step-active");
 
 
 
-    const [username,setUsername] =useState("")
+    const [_id,set_id] =useState("")
     const [designation,setdesignation] =useState("")
     const [email,setEmail] =useState("")
     const [phone,setPhone] =useState("")
@@ -90,12 +90,14 @@ const progressActive = document.querySelectorAll(".progress-step-active");
     const [error,setError] =useState(false)
   
     const handleSubmit= async(e)=>{
+      set_id(uuidv4());
+
         e.preventDefault()
         setError(false)
        try{ 
-        
+       
         const res= await axios.post("http://localhost:5000/server/complains/multiForm",{
-          username,
+          _id,
           designation,
           phone,
           stat,
@@ -112,6 +114,7 @@ const progressActive = document.querySelectorAll(".progress-step-active");
           accused_desc,
           email,
         })
+        const response = await axios.post('http://localhost:5000/server/send-mail', { email,_id });
         res.data && window.location.replace("/landingPage")
       }
         catch(err){
@@ -138,10 +141,6 @@ const progressActive = document.querySelectorAll(".progress-step-active");
     
     <div className="form-step form-step-active">
       <h3>Information About Complaintant</h3>
-      <div className="input-grp">
-        <label>Name: </label>
-        <input type="text" placeholder="Enter Your Full Name"  onChange={(e) =>setUsername(e.target.value)} / >
-      </div>
       <div className="input-grp">
         <label>Designaton:</label>
         <input type="text" placeholder="Enter Your Job Title"  onChange={(e) =>setdesignation(e.target.value)} />

@@ -73,7 +73,7 @@ input[type="text"]:focus {
     color: black;
 }
 
-.btn {
+.btn-button {
     margin-right: 20px;
     border-color: #a677e6;
     border-radius: 40%;

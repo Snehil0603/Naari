@@ -115,8 +115,8 @@ function Chat() {
 
                 />
                 <div className="text-btn">
-                    <button className='btn' onClick={startRecognition}><i class="fa fa-microphone" aria-hidden="true"></i></button>
-                    <button className='btn' onClick={processUserInput} ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    <button className='btn-button' onClick={startRecognition}><i class="fa fa-microphone" aria-hidden="true"></i></button>
+                    <button className='btn-button' onClick={processUserInput} ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>

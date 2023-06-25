@@ -1,0 +1,56 @@
+.session-information {
+    background-image: url("../../assests/download.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    color: black;
+    padding: 16px;
+    border-radius: 10px;
+
+  }
+  
+  .session-information__title {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    margin-bottom: 16px;
+    margin-top: 50px;
+  }
+  
+  .session-information__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .session-information__card {
+    background-color: #a677e6;
+    color: #ffffff;
+    padding: 16px;
+    margin: 2%;
+    border-radius: 10px;
+    width: calc(40% - 32px);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .session-information__card:hover {
+    background-color: #d39bf9;
+    cursor: pointer;
+  }
+  
+  .session-information__card-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    background-color: rgb(172, 3, 172);
+  }
+  
+  .session-information__card-details {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  

@@ -38,7 +38,7 @@ const Features = () => {
       img: laws,
       title: "Laws",
       description: "Learn about the laws of harassment",
-      ref:"/rules"
+      ref:"/laws"
     },
     {
       img: session,

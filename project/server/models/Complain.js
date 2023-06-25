@@ -1,10 +1,10 @@
 const mongoose=require("mongoose")
 
 const ComplainSchema=new mongoose.Schema({
-    username:{
+    _id:{
         type:String,
-        required :true,
-        unique:true
+        required:true,
+        unique:true,
     },
     designation:{
         type:String,
@@ -81,6 +81,10 @@ const ComplainSchema=new mongoose.Schema({
         required :true,
         unique:true
     },
+    status: {
+        type: String,
+        default: 'Submitted'
+      },
 
 },
 {timestamps:true}

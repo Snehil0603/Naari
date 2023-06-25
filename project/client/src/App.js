@@ -12,6 +12,8 @@ import Testimonials from "./pages/testimonials/Testimonials";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Chat from "./pages/chat/Chat";
+import Track from "./pages/track/Track"
+import Sessions from "./pages/sessions/Sessions"
 import {
   BrowserRouter as Router,
   Switch,
@@ -71,7 +73,7 @@ function App() {
        <Route path="/multiForm">
  <MultiForm/>
        </Route>
-       <Route path="/rules">
+       <Route path="/laws">
  <Rules/>
        </Route>
        <Route path="/testimonials">
@@ -86,6 +88,12 @@ function App() {
        <Route path="/chat">
  <Chat/>
        </Route> 
+       <Route path="/track">
+ <Track/>
+       </Route>
+       <Route path="/session">
+ <Sessions/>
+       </Route>
   </Switch>
   </Router>
    
